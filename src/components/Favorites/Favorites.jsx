@@ -30,7 +30,8 @@ const Favorites = () => {
   return (
     <div className={styles.background}>
       <h1>Mis Favoritos</h1>
-      <div>
+      
+      <div className={styles.selectores}>
         <select id="orderSelect" onChange={handleOrder}>
           <option value="order" disabled>Ordenar en</option>
           <option value="Ascendente">Ascendente</option>
@@ -43,14 +44,16 @@ const Favorites = () => {
           <option value="Genderless">Sin Genero</option>
           <option value="unknown">Desconocido</option>
         </select>
-
         <button value="reset" onClick={handleReset}>Restablecer</button>
       </div>
+
+
       <div className={styles.container}>
         {favorites.map((fav) => (
           <Card key={fav.id} {...fav} isFavorite={true} />
         ))}
       </div>
+
     </div>
   );
 }
