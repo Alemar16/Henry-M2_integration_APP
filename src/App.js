@@ -64,9 +64,9 @@ function App() {
     navigate("/");
   };
 
-  useEffect(() => {
+/*   useEffect(() => {
     !access && navigate("/");
-  }, [access, navigate]);
+  }, [access, navigate]); */
 
   return (
     <div className="App">
