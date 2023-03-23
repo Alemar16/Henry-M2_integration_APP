@@ -1,0 +1,63 @@
+.Background {
+  background-image: url('https://wall.alphacoders.com/big.php?i=633151&lang=Spanish');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; 
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+
+section {
+    width: 50%;
+  margin-bottom: 50px;
+  box-sizing: border-box;
+  padding-right: 20px;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.imagen {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.imagen img {
+  border-radius: 10px;
+}
+
+section:last-child {
+  padding-right: 0;
+}
