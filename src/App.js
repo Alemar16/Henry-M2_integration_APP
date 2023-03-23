@@ -89,8 +89,8 @@ function App() {
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/detail/:detailId" element={<Detail />} />
 
-        <Route path="/404" element={<Error404 />} />
-        <Route path="*" element={<Navigate to="/404" />} />
+        <Route path="*" element={<Error404 />} />
+        
       </Routes>
     </div>
   );
