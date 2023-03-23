@@ -4,57 +4,85 @@ import styles from "./Sinopsis.module.css";
 const Sinopsis = () => {
   return (
     <div className={styles.container}>
-      <h1 className={styles.h1}>Rick and Morty</h1>
-      <p className={styles.p}>
-        Rick Sánchez es un ejemplo del típico "científico loco". Es un genio,
-        pero es irresponsable, alcohólico, egoísta, un poco depresivo y con poca
-        cordura.Rick por diferentes razones termina mudándose a la casa de su
-        hija Beth y en ese momento se encuentra con su nieto Morty; un chico de
-        14 años de edad, tímido y no muy listo.
-        <p>
-          Al juntarse con su nieto, Rick y Morty viven una variedad de aventuras
-          a lo largo del cosmos y universos paralelos. Y es mediante tantas
-          vivencias y reflexiones que Rick busca que su nieto Morty no acabe
-          como su padre, Jerry, un hombre muy poco exitoso que a pesar de tener
-          buenas intenciones resulta ser bastante inútil en muchas ocasiones y
-          depende mucho de su esposa, Beth, hija de Rick.
-        </p>
-        <p>
-          A pesar de estar muy apegados, Rick y su nieto experimentan momentos
-          en los que Summer, hermana de Morty, se une en ocasiones a las
-          pintorescas aventuras provocadas por Rick.
-        </p>
-      </p>
-
-      <section>
-        <h2>Información</h2>
-        <h3>Titulo en Español</h3>
-        <p>Rick y Morty</p>
-        <h3>Creado por</h3>
-        <p>Justin Roilan y Dan Harmon</p>
-        <h3>Numero de Temporadas</h3>
-        <p>6 temporadas / 61 Capitulos</p>
-        <h3>Sitio Web Oficial</h3>
-      </section>
-
-      <section>
-        <h2>Personajes Principales</h2>
-        <div className={styles.imagen}>
+      <div className={styles.sidebarLeft}>
+        <div className={styles.sidebarImage}>
           <img
-            src="https://i.pinimg.com/736x/2c/31/af/2c31af5f036d820e31e60f1918fb0626.jpg"
-            alt="Rick"
-            width="300"
-            height="200"
+            src="https://media0.giphy.com/media/3o7TKqGAZAbdKoaxu8/giphy.gif?cid=ecf05e47f2ni0ilrry3cry3lvz6es90cuvbrhh2huk3153cs&rid=giphy.gif&ct=g"
+            alt="Left Sidebar Image 1"
+            className={styles.image}
           />
           <img
-            src="https://th.bing.com/th/id/R.c181f79c911aaba87515c8228ca0de6d?rik=FJG1sPvaw81bqA&riu=http%3a%2f%2fvignette4.wikia.nocookie.net%2frickandmorty%2fimages%2f4%2f41%2fMorty_Smith.jpg%2frevision%2flatest%3fcb%3d20170217193441&ehk=Sypuun0QVwJOf5Dfn%2fmIU9Z%2fvZKJ1kGeIm7ZChFA1UA%3d&risl=&pid=ImgRaw&r=0"
-            alt="Morty"
-            width="200"
-            height="300"
+            src="https://media1.giphy.com/media/uZrLs0rcNc9sA/giphy.gif?cid=ecf05e479hz4o4bpjwfpx35ndaeldm3l3voey5pksl9j1aii&rid=giphy.gif&ct=g"
+            alt="Left Sidebar Image 2"
+            className={styles.image}
+          />
+          <img
+            src="https://media4.giphy.com/media/3oEduHUtBvTIIBosJq/giphy.gif?cid=ecf05e47816v0fcaeokyavhr6msp8mouwpi9yh5m48ce6be8&rid=giphy.gif&ct=g"
+            alt="Left Sidebar Image 3"
+            className={styles.image}
           />
         </div>
-      </section>
+      </div>
+      <div className={styles.mainContent}>
+        <h1 className={styles.h1}>Rick and Morty</h1>
+        <div className={styles.content}>
+          <div className={styles.summary}>
+            <p className={styles.p}>
+              Rick Sánchez es un ejemplo del típico "científico loco". Es un
+              genio, pero es irresponsable, alcohólico, egoísta, un poco
+              depresivo y con poca cordura.Rick por diferentes razones termina
+              mudándose a la casa de su hija Beth y en ese momento se encuentra
+              con su nieto Morty; un chico de 14 años de edad, tímido y no muy
+              listo.
+            </p>
+            <p className={styles.p}>
+              Al juntarse con su nieto, Rick y Morty viven una variedad de
+              aventuras, muchas de las cuales involucran viajes
+              interdimensionales y extraterrestres. Rick es un abuelo muy poco
+              convencional, pero al final del día, siempre se preocupa por Morty
+              y su familia.
+            </p>
+          </div>
+        </div>
+        <div className={styles.details}>
+          <h2 className={styles.h2}>Información</h2>
+          <ul className={styles.list}>
+            <li>
+              <span>Creado por:</span> Justin Roilan y Dan Harmon
+            </li>
+            <li>
+              <span>Numero de Temporadas:</span> 6 temporadas / 61 Capitulos
+            </li>
+          </ul>
+          <a
+            href="https://www.adultswim.com/videos/rick-and-morty/"
+            className={styles.link}
+          >
+            Sitio Web Oficial
+          </a>
+        </div>
+      </div>
+      <div className={styles.sidebarRight}>
+        <div className={styles.sidebarImage}>
+          <img
+            src="https://media4.giphy.com/media/3o85xFUjFFIGxIy7fO/giphy.gif?cid=ecf05e476j1a9aov47iwnunquk60prfczcgvusyf107rq296&rid=giphy.gif&ct=g"
+            alt="Right Sidebar Image 1"
+            className={styles.image}
+          />
+          <img
+            src="https://media1.giphy.com/media/l378BzHA5FwWFXVSg/giphy.gif?cid=ecf05e47uo9nr0pl8eh2uq82mss7g4fedbfqpkln5yyamhuu&rid=giphy.gif&ct=g"
+            alt="Right Sidebar Image 2"
+            className={styles.image}
+          />
+          <img
+            src="https://media3.giphy.com/media/oYMxbPiBVlVII/giphy.gif?cid=ecf05e477j3fr13e8772kfc5mz18wu2b8absv2emanqe29y8&rid=giphy.gif&ct=g"
+            alt="Right Sidebar Image 3"
+            className={styles.image}
+          />
+        </div>
+      </div>
     </div>
   );
 };
+
 export default Sinopsis;
