@@ -10,12 +10,12 @@ export  const validate = (inputs) => {
   //inputs --. {userName: "Feli", password: ""}
   const errors = {}; 
   if (regexEmail.test(inputs.userName)) {
-    errors.userName = "debe ser un email";
+    errors.userName = "Debe ser un email";
   }
   if (!inputs.userName) {
     errors.userName = "No puede ser vacio";
   }
-  if (inputs.userName.length > 35) {
+  if (inputs.userName.length >= 35) {
     errors.userName = "No puede tener mas de 35 caracteres";
   }
   if (!validLettersAndNumbers.test(inputs.password)) {
