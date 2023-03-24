@@ -56,7 +56,7 @@ const Sinopsis = () => {
           </ul>
           <a
             href="https://www.adultswim.com/videos/rick-and-morty/"
-            className={styles.link}
+            className={styles.link} 
           >
             Sitio Web Oficial
           </a>
