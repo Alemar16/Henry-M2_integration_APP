@@ -2,8 +2,8 @@
   background-image: url(https://wallpapercave.com/wp/wp6784639.jpg);
     background-size: cover;
   background-position: center center;
-  height: 83vh;
-  padding: 20px;
+  height: 86vh;
+  padding: 5px;
 }
 
 .welcome-card {
@@ -11,33 +11,50 @@
   top: 0;
   left: 0;
   z-index: 100;
+ 
+}
+.background{
+  background-image: url("../../assets/imagenes/Linkedin\ Henry\ STUDENTS-05.png");
+  background-size: cover;
 }
 .card {
-  background-color: #1c1d25ce;
+  background-color: #a3a5b141;
   border-radius: 20px;
   margin: 30px 10px 10px 10px;
   padding: 1rem;
   position: relative;
   z-index: 1;
-  transition: background-color 0.3s ease-in-out;
-  background: linear-gradient(to right, #212121 0%, #1b1b1b 50%, #0a0a0a 100%);
+  /* transition: background-color 0.3s ease-in-out;
+  background: linear-gradient(to right, #212121 0%, #1b1b1b 50%, #0a0a0a 100%); */
 }
 
 .card:hover {
-  background: linear-gradient(to right, #0a0a0a 0%, #333333c9 100%);
+  /* background: linear-gradient(to right, #0a0a0a 0%, #333333c9 100%); */
    box-shadow: 0 0 10px rgba(234, 241, 241, 0.6);
 }
 
 .title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 3rem;
+  margin-bottom: 8rem;
+  margin-top: 0;
+    color: #d5d815; /* rojo oscuro */
+  font-weight: bold;
+  text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.493); 
 }
-
+.subtitle{
+  font-size: 2rem;
+  padding: 0;
+  margin: 0;
+  text-shadow: 1px 1px 0px rgb(172, 148, 11); 
+}
 .text {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #d0d0d0;
+  text-shadow: 3px 3px 0px rgba(0,0,0,0.2); 
 }
 
 .link {
@@ -88,6 +105,25 @@
   box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
   transition: all 0.3s ease-in-out;
 }
+.list1{
+  display: block;
+  color: #d5d815; /* rojo oscuro */
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-shadow: 3px 3px 0px rgba(0,0,0,0.2); 
+}
+.list2{
+  display: block;
+  color: #9c930b;
+  font-size: 1.5em;
+   text-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+}
+.list3{
+  display: block;
+  color: #9c930b;
+  font-size: 1.5em;
+   text-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+}
 
 @media (max-width: 768px) {
   .button-container {
@@ -125,7 +161,7 @@
 
 .active {
   background-color: #1a1a1a;
-  color: #b61616;
+  color: #dbbe16;
 }
 
 

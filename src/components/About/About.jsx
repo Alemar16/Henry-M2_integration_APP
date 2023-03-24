@@ -10,61 +10,56 @@ const About = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.card}>
-        <h2 className={styles.title}>
-          Bienvenidos a mi primer Single Page Application
-        </h2>
-        <p className={styles.text}>
-          En esta App utilice los conocimientos adquiridos en{" "}
-          <a
-            href="https://www.soyhenry.com/"
-            target="_blank"
-            rel="noreferrer"
-            className={styles.link}
-          >
-            Soy Henry
-          </a>{" "}
-          durante el Modulo 2 con React Framework
-        </p>
-        <div className={styles.buttonContainer}>
-          <button
-            className={`${styles.button} ${
-              selected === "personal" ? styles.active : ""
-            }`}
-            onClick={() => handleClick("personal")}
-          >
-            Información Personal
-          </button>
-          <button
-            className={`${styles.button} ${
-              selected === "projects" ? styles.active : ""
-            }`}
-            onClick={() => handleClick("projects")}
-          >
-            Proyectos
-          </button>
-          <button
-            className={`${styles.button} ${
-              selected === "skills" ? styles.active : ""
-            }`}
-            onClick={() => handleClick("skills")}
-          >
-            Habilidades
-          </button>
+      <div className={styles.background}>
+        <div className={styles.card}>
+          <h2 className={styles.title}>
+            Bienvenidos a mi primer Single Page Application
+          </h2>
+
+          <div className={styles.buttonContainer}>
+            <button
+              className={`${styles.button} ${
+                selected === "personal" ? styles.active : ""
+              }`}
+              onClick={() => handleClick("personal")}
+            >
+              Información Personal
+            </button>
+            <button
+              className={`${styles.button} ${
+                selected === "projects" ? styles.active : ""
+              }`}
+              onClick={() => handleClick("projects")}
+            >
+              Proyectos
+            </button>
+            <button
+              className={`${styles.button} ${
+                selected === "skills" ? styles.active : ""
+              }`}
+              onClick={() => handleClick("skills")}
+            >
+              Redes Sociales
+            </button>
+          </div>
         </div>
       </div>
       {selected === "personal" && (
         <div className={styles.card}>
           <h2 className={styles.subtitle}>Información Personal</h2>
-          <ul className={styles.list}>
+          <p className={styles.text}>
+            En esta App utilicé los conocimientos adquiridos en Soy Henry
+            durante el Modulo 2 con React Framework
+          </p>
+          <ul className={styles.list1}>
             <li className={styles.item}>
-              <strong>Nombre:</strong> Juan Pérez
+              <strong>Nombre:</strong> Armando Martínez
             </li>
             <li className={styles.item}>
-              <strong>Edad:</strong> 30 años
+              <strong>Ubicación:</strong> Córdoba, Argentina.
             </li>
             <li className={styles.item}>
-              <strong>Correo electrónico:</strong> juanperez@gmail.com
+              <strong>Correo electrónico:</strong>alemar.martinez16@gmail.com
             </li>
           </ul>
         </div>
@@ -72,7 +67,7 @@ const About = () => {
       {selected === "projects" && (
         <div className={styles.card}>
           <h2 className={styles.subtitle}>Proyectos</h2>
-          <ul className={styles.list}>
+          <ul className={styles.list2}>
             <li className={styles.item}>
               <strong>Proyecto 1:</strong> Desarrollo de una aplicación web con
               React
@@ -90,16 +85,38 @@ const About = () => {
       )}
       {selected === "skills" && (
         <div className={styles.card}>
-          <h2 className={styles.subtitle}>Habilidades</h2>
-          <ul className={styles.list}>
-            <li className={styles.item}>
-              <strong>Frontend:</strong> HTML, CSS, JavaScript, React
+          <h2 className={styles.subtitle}>Redes Sociales</h2>
+          <ul className={styles.list3}>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/armando-martinez/"
+                target="_blank"
+                rel="noreferrer"
+                className={styles.iten}
+              >
+                LinkendIn
+              </a>
             </li>
-            <li className={styles.item}>
-              <strong>Backend:</strong> Node.js, Express, MongoDB
+            <li>
+              <a
+                href="https://github.com/alemar16"
+                target="_blank"
+                className={styles.iten}
+                rel="noreferrer"
+              >
+                Github
+              </a>
             </li>
-            <li className={styles.item}>
-              <strong>Otras habilidades:</strong> Diseño gráfico, UI/UX design
+
+            <li>
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noreferrer"
+                className={styles.iten}
+              >
+                Twitter
+              </a>
             </li>
           </ul>
         </div>
@@ -176,12 +193,7 @@ const About = () => {
             <a
               href="https://github.com/alemarmar"
               target="_blank"
-              rel="noreferrer"
-              className={styles.icon}
-            >
-              <i className="fab fa-github"></i>
-            </a>
-          </li>
+              rel="noreferrer"</a></li>
           <li>
             <a
               href="https://twitter.com/alemarmar"
