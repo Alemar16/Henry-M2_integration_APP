@@ -5,6 +5,11 @@
   height: 40px;
 }
 
+.opcion{
+  margin-right: 40px;
+ 
+}
+ 
 ul {
   display: flex;
   list-style: none;
@@ -57,7 +62,7 @@ a:hover::before {
   text-decoration: none;
   color: inherit;
 }
-
+ 
 
 
 

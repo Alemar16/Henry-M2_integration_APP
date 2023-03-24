@@ -17,10 +17,10 @@ const NavLinkMe = ({ to, children, ...props }) => {
 export default function Navbar() {
   return (
     <div className={styles.navbar}>
-      <NavLinkMe to="/home">Inicio</NavLinkMe>
-      <NavLinkMe to="/sinopsis">Sinopsis</NavLinkMe>
-      <NavLinkMe to="/favorites">Favoritos</NavLinkMe>
-      <NavLinkMe to="/about">Acerca de Mi</NavLinkMe>
+      <NavLink to="/home" className={styles.opcion}>Inicio</NavLink>
+      <NavLink to="/sinopsis" className={styles.opcion}>Sinopsis</NavLink>
+      <NavLink to="/favorites" className={styles.opcion}>Favoritos</NavLink>
+      <NavLink to="/about" className={styles.opcion}>Acerca de Mi</NavLink>
     </div>
   );
 }
