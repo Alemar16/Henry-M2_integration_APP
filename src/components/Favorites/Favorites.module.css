@@ -35,7 +35,7 @@
   width: calc(20% - 20px);
 }
 
-h1 {
+.titulo {
   margin-top: 0;
   margin-bottom: 0;
   font-family: Get Schwifty;
@@ -43,7 +43,7 @@ h1 {
   color:rgb(13, 228, 41)
 }
 
-.h1:hover {
+.titulo:hover {
   text-shadow: 0 0 10px rgba(234, 241, 241, 0.6);;
 }
 
