@@ -29,7 +29,7 @@ const Favorites = () => {
   
   return (
     <div className={styles.background}>
-      <h1>Mis Favoritos</h1>
+      <h1 className={styles.titulo}>Mis Favoritos</h1>
 
       <div className={styles.selectores}>
         <select id="orderSelect" onChange={handleOrder}>
