@@ -39,7 +39,7 @@ export default function Detail(props) {
               <span className={styles.texto}>Name:</span>{" "}
               <span className={styles.text2}>{character.name}</span>
             </h1>
-            <br />
+          
             <h1><span className={styles.texto}>Gender:</span> {character.gender}</h1>
             <h1><span className={styles.texto}>Specie:</span> {character.species}</h1>
             <h1><span className={styles.texto}>Status:</span> {character.status}</h1>
