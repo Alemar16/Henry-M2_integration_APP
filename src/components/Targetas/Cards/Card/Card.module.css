@@ -1,7 +1,7 @@
-@font-face {
+/* @font-face {
   font-family: 'Get Schwifty';
   src: url('../../../../assets/Font/get_schwifty.ttf') format('truetype');
-}
+} */
 
 .card {
   background-color: rgba(0, 0, 0, 0.473);
@@ -10,7 +10,7 @@
   -webkit-backdrop-filter: blur(10px); 
   font-family: RampartOne-Regular;
   width: 10em;
-  height: 16em;
+  height: 18em;
   border-radius: 15px 0 15px 15px;
   overflow: hidden;
   margin: 0.5em;
@@ -27,7 +27,7 @@
  .card::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: 0%;
   left: 0;
 } 
 
@@ -50,6 +50,7 @@
   transform: translateY(-50%);
   z-index: 1000;
   width: 100%;
+  height: 57%;
   transition: 0.1s;
   margin-bottom: 50px;
   transform-style: preserve-3d;
@@ -64,9 +65,8 @@
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 0.5rem;
+  padding: ;
   font-size: 1em;
-  font-family:Get Schwifty;
   color: rgb(13, 228, 41);
   text-align: center;
 } 
@@ -74,6 +74,8 @@
 .speciesYGenero {
   justify-content: baseline;
   color: white;
+  margin-bottom: 0.5rem;
+  padding-top: 0.5rem;
   font-size: 0.9rem;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.412);
 }
