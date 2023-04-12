@@ -24,7 +24,7 @@ const Sinopsis = () => {
         </div>
       </div>
       <div className={styles.mainContent}>
-        <h1 className={styles.h1}>Rick and Morty</h1>
+        <h1 className={styles.titulo_sinopsis}>Rick and Morty</h1>
         <div className={styles.content}>
           <div className={styles.summary}>
             <p className={styles.p}>

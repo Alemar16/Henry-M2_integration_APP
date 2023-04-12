@@ -4,7 +4,7 @@ background-image: url(https://images5.alphacoders.com/633/633151.jpg);
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 89vh;
+  height: auto;
 }
 
 .sidebarLeft {
@@ -42,10 +42,12 @@ background-image: url(https://images5.alphacoders.com/633/633151.jpg);
   padding: 20px; /* Reduce el espacio interno */
 }
 
-h1 {
+.titulo_sinopsis {
   text-align: center;
+  color:aliceblue;
   font-size: 4em; /* Reduce el tamaño de fuente del título */
-  line-height: 1.2; /* Ajusta la altura de línea del título */
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;/* Ajusta la altura de línea del título */
 }
 
 .content {
