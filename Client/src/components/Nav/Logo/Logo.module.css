@@ -1,16 +1,14 @@
-
-.logo {
+.logoContainer {
   display: flex;
   align-items: center;
 }
-.logoImg {
+.logoImage {
   margin-top: 20px;
   margin-left: 10px;
   max-width: 100px;
-  max-height: 100Px;
+  max-height: 100px;
 }
-.logoImg:hover {
+.logoImage:hover {
   transform: scale(1.2);
   margin-top: 60px;
 }
-
