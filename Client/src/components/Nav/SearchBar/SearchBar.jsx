@@ -22,6 +22,7 @@ export default function SearchBar(props) {
   return (
     <div className={style.container}>
       <input
+        className={style.searchInput}
         type="search"
         placeholder="Escribe un ID"
         name="search"
@@ -29,8 +30,12 @@ export default function SearchBar(props) {
         onChange={handleChange}
         value={id}
       />
-      <button onClick={handleAddCharacter}>Agregar</button>
-      <button onClick={handleRandomCharacter}>Aleatorio</button>
+      <button className={style.searchButtonAdd} onClick={handleAddCharacter}>
+        Agregar
+      </button>
+      <button className={style.searchButtonRandon} onClick={handleRandomCharacter}>
+        Aleatorio
+      </button>
     </div>
   );
 }
