@@ -38,12 +38,10 @@ Si el estado isFav es false, entonces settea ese estado en true, y despacha la f
   return (
     <div className={styles.card}>
       {isFav ? (
-        <button className={styles.favButton} onClick={handleFavorite}>
-          ❤️
+        <button className={styles.favButton} onClick={handleFavorite}>❤️
         </button>
       ) : (
-        <button className={styles.favButton} onClick={handleFavorite}>
-          🤍
+        <button className={styles.favButton} onClick={handleFavorite}>🤍
         </button>
       )}
 

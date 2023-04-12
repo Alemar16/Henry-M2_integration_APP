@@ -1,8 +1,3 @@
-/* @font-face {
-  font-family: 'Get Schwifty';
-  src: url('../../../../assets/Font/get_schwifty.ttf') format('truetype');
-} */
-
 .card {
   background-color: rgba(0, 0, 0, 0.473);
   border: 2px solid rgba(7, 7, 7, 0.5);
@@ -21,10 +16,10 @@
 } 
 .card:hover {
   background: linear-gradient(to right, #0a0a0a 0%, #33333300 100%);
-   box-shadow: 0 0 10px rgba(234, 241, 241, 0.6);
+  box-shadow: 0 0 10px rgba(234, 241, 241, 0.6);
 }
 
- .card::before {
+.card::before {
   content: "";
   position: absolute;
   top: 0%;
@@ -79,31 +74,26 @@
   font-size: 0.9rem;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.412);
 }
- 
 .cardButton {
   font-size: 0.8rem;
   font-weight: bold;
-  padding: 0.3rem 0.5rem;
+  padding: 0.2rem 0.4rem;
   background-color: transparent;
   color: #fff;
-  border-radius: 0.5rem 0 0.5rem 0.5rem;
-  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-  transition: background-color 0.1s ease-in-out;
+  border-radius: 0rem 0 0rem 0.5rem;
+  box-shadow: 0 0 0px rgba(255, 255, 255, 0);
   position: absolute;
   top: 0;
   right: 0;
 }
-
 .cardButton:hover {
-  background-color: #ff4d4d;
-  transform: scale(1.5);
+  background-color: #d40d0d;
+  transform: scale(1);
 } 
-
-
 .favButton{
   background-color: transparent;
   position: absolute;
-    top: 0px;
+  top: 0px;
   left: 0px;
   right: 800px;
   margin-left: 0;
