@@ -30,7 +30,7 @@ const Sinopsis = () => {
             <p className={styles.p}>
               Rick Sánchez es un ejemplo del típico "científico loco". Es un
               genio, pero es irresponsable, alcohólico, egoísta, un poco
-              depresivo y con poca cordura.Rick por diferentes razones termina
+              depresivo y con poca cordura. Rick por diferentes razones termina
               mudándose a la casa de su hija Beth y en ese momento se encuentra
               con su nieto Morty; un chico de 14 años de edad, tímido y no muy
               listo.
