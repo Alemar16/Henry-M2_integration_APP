@@ -2,14 +2,13 @@
   z-index: 1;
 }
 .container {
-  position: relative;
-  margin-top: 0.5rem;
+  position: fixed;
+  top: 10px;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
-  padding-right: 0;
+  height: 80px;
   background: linear-gradient(to right, #000, #111);
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
   background-color: black;
