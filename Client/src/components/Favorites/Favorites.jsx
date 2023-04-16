@@ -1,4 +1,4 @@
-import React, { useRef } from "react"
+import React, { /* useRef */ } from "react"
 import { useSelector, useDispatch } from "react-redux";
 import Card from "../Targetas/Cards/Card/Card";
 import styles from "./Favorites.module.css"
@@ -18,8 +18,8 @@ const Favorites = () => {
    const handleFilter = (event) => {
      dispatch(filterCards(event.target.value));
    };
-  const filter = useRef(null);
-  const order = useRef(null);
+/*   const filter = useRef(null);
+  const order = useRef(null); */
   
   const handleReset = (e) => {
     dispatch({ type: "RESET" });

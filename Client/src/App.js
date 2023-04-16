@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState, useEffect } from "react";
+import { useState, /* useEffect */ } from "react";
 import Nav from "./components/Nav/Nav";
 import Titulo from "./components/Titulo/Titulo";
 import ErrorMessage from "./components/ErrorMessage/ErrorMessage";
@@ -10,7 +10,7 @@ import Detail from "./components/Detail/Detail";
 import Sinopsis from "./components/Sinopsis/Sinopsis";
 import Form from "./components/Form/Form";
 import Error404 from "./components/Error404/Error404";
-import { Navigate } from "react-router-dom";
+/* import { Navigate } from "react-router-dom"; */
 import Favorites from "./components/Favorites/Favorites";
 import HomeMessage from "./components/HomeMessage/HomeMessage";
 

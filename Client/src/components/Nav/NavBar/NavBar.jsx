@@ -8,8 +8,8 @@ const NavbarLink = ({ to, children, ...props }) => {
       {...props}
       to={to}
       className={styles.navbarLink}
-      activeClassName={styles.active}
-      inactiveClassName={styles.disable}
+      activeclassname={styles.active}
+      inactivecassname={styles.disable}
     >
       {children}
     </NavLink>
