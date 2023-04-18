@@ -5,8 +5,8 @@ const initialState = {
   myFavorites: [],
   allCharacters: []
 }
-
-const rootReducer = (state = initialState, action) => {
+//metodo anterior Sin Express
+/* const rootReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_FAVORITE:
       const addFavorite = [...state.allCharacters, action.payload]
@@ -14,44 +14,69 @@ const rootReducer = (state = initialState, action) => {
         ...state,
         myFavorites: [...addFavorite], 
         allCharacters: [...addFavorite],
-      };
+      }; */
 
-    case REMOVE_FAVORITE:
-      const removeFavorite = state.allCharacters.filter(e => e.id !== action.payload)
-      return {
-        ...state,
-        myFavorites: [...removeFavorite],
-        allCharacters: [...removeFavorite],
-      };
+//Metodo con Express
+  const rootReducer = (state = initialState, action) => {
+    switch (action.type) {
+      case ADD_FAVORITE:
+        const addFavorite = [...action.payload];
+        return {
+          ...state,
+          myFavorites: [...addFavorite],
+          allCharacters: [...addFavorite],
+        };
 
-    case FILTER:
-      return {
-        ...state,
-        myFavorites: state.allCharacters.filter(e => e.gender === action.payload),
-      };
+      //Metodo anterior sin Express
+      /* case REMOVE_FAVORITE:
+        const removeFavorite = state.allCharacters.filter(
+          (e) => e.id !== action.payload
+        );
+        return {
+          ...state,
+          myFavorites: [...removeFavorite],
+          allCharacters: [...removeFavorite],
+        }; */
 
-    case ORDER:
-      let sortedCharacters;
+      case REMOVE_FAVORITE:
+        return {
+          ...state,
+          myFavorites: action.payload,
+        };
+
+      case FILTER:
+        return {
+          ...state,
+          myFavorites: state.allCharacters.filter(
+            (e) => e.gender === action.payload
+          ),
+        };
+
+      case ORDER:
+        let sortedCharacters;
         if (action.payload === "Ascendente") {
-          sortedCharacters = state.myFavorites.sort((a, b) => a.id > b.id ? 1 : -1);
+          sortedCharacters = state.myFavorites.sort((a, b) =>
+            a.id > b.id ? 1 : -1
+          );
         } else {
-          sortedCharacters = state.myFavorites.sort((a, b) => a.id < b.id ? 1 : -1);
+          sortedCharacters = state.myFavorites.sort((a, b) =>
+            a.id < b.id ? 1 : -1
+          );
         }
-      return {
-        ...state,
-        myFavorites: [...sortedCharacters],
-      };
-    
-    case 'RESET':
-      return {
-        ...state,
-        myFavorites: state.allCharacters,
-      }
+        return {
+          ...state,
+          myFavorites: [...sortedCharacters],
+        };
 
-    default:
-      return state ;
-  }
+      case "RESET":
+        return {
+          ...state,
+          myFavorites: state.allCharacters,
+        };
 
-}
+      default:
+        return state;
+    }
+  };
 
 export default rootReducer;

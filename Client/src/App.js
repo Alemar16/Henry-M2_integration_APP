@@ -1,3 +1,4 @@
+import axios from "axios";
 import "./App.css";
 import { useState, /* useEffect */ } from "react";
 import Nav from "./components/Nav/Nav";
@@ -21,8 +22,8 @@ function App() {
   const [characters, setCharacters] = useState([]);
   const [error, setError] = useState(null);
   const [access, setAccess] = useState(false);
-  const userName = "alemar.martinez16@gmail.com";
-  const password = "123";
+/*   const userName = "alemar.martinez16@gmail.com";
+  const password = "123"; */
 
   function onSearch(character) {
     const characterId = parseInt(character);
@@ -50,8 +51,8 @@ function App() {
   function handleCloseCard(id) {
     setCharacters((oldChars) => oldChars.filter((char) => char.id !== id));
   }
-
-  const login = (userData) => {
+  //Metodo anterior Sin Express
+  /*   const login = (userData) => {
     // {userName : "alemar.martinez16@gmail.com", password: "123"}
     if (userData.userName === userName && userData.password === password) {
       setAccess(true);
@@ -59,13 +60,26 @@ function App() {
     } else {
       alert("El usuario o la contraseña no son correctos.");
     }
-  };
+  }; */
+
+  // Con Express
+  function login(userData) {
+    const { userName, password } = userData;
+    const URL = "http://localhost:3001/rickandmorty/login/";
+    axios(`${URL}?email=${userName}&password=${password}`).then(({ data }) => {
+      const { access } = data;
+      setAccess(data);
+      console.log(access)
+      access && navigate("/home");
+    });
+  }
+
   const logOut = () => {
     access && setAccess(false);
     navigate("/");
   };
 
-/*   useEffect(() => {
+  /*   useEffect(() => {
     !access && navigate("/");
   }, [access, navigate]); */
 
@@ -82,7 +96,7 @@ function App() {
           element={
             <>
               <Titulo />
-              <HomeMessage/>
+              <HomeMessage />
               <Cards onCloseCard={handleCloseCard} characters={characters} />
             </>
           }
@@ -92,7 +106,6 @@ function App() {
         <Route path="/detail/:detailId" element={<Detail />} />
 
         <Route path="*" element={<Error404 />} />
-        
       </Routes>
     </div>
   );
