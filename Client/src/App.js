@@ -1,6 +1,6 @@
 import axios from "axios";
 import "./App.css";
-import { useState, /* useEffect */ } from "react";
+import { useState /* useEffect */ } from "react";
 import Nav from "./components/Nav/Nav";
 import Titulo from "./components/Titulo/Titulo";
 import ErrorMessage from "./components/ErrorMessage/ErrorMessage";
@@ -15,17 +15,48 @@ import Error404 from "./components/Error404/Error404";
 import Favorites from "./components/Favorites/Favorites";
 import HomeMessage from "./components/HomeMessage/HomeMessage";
 
-
 function App() {
   const navigate = useNavigate();
   const location = useLocation();
   const [characters, setCharacters] = useState([]);
   const [error, setError] = useState(null);
   const [access, setAccess] = useState(false);
-/*   const userName = "alemar.martinez16@gmail.com";
-  const password = "123"; */
 
-  function onSearch(character) {
+  //========CREDENCIALES ANTERIORES CON LA APP REACT==============
+  /*   const userName = "alemar.martinez16@gmail.com";
+  const password = "123"; */
+  //================================================================
+
+  //=======METODO CON ASYNC  AWAIT======================================
+  async function onSearch(character) {
+    const characterId = parseInt(character);
+    if (isNaN(characterId)) {
+      setError("Por favor ingresa un valor numérico.");
+      return;
+    }
+    if (characters.some((char) => char.id === characterId)) {
+      setError(`El personaje con ID ${characterId} ya está mostrado.`);
+      return;
+    }
+    try {
+      const response = await axios.get(
+        `http://localhost:3001/rickandmorty/character/${characterId}`
+      );
+      const data = response.data;
+      if (data.name) {
+        setCharacters((oldChars) => [...oldChars, data]);
+        setError(null);
+      } else {
+        setError(`No existe un personaje con el ID ${characterId}`);
+      }
+    } catch (error) {
+      setError(error.message);
+    }
+  }
+  //=============================================================================
+
+  //=============METODO CON EXPRESS Y PROMESAS=================================
+  /*   function onSearch(character) {
     const characterId = parseInt(character);
     if (isNaN(characterId)) {
       setError("Por favor ingresa un valor numérico.");
@@ -46,12 +77,10 @@ function App() {
           setError(`No existe un personaje con el ID ${characterId}`);
         }
       });
-  }
+  } */
+  //===========================================================================
 
-  function handleCloseCard(id) {
-    setCharacters((oldChars) => oldChars.filter((char) => char.id !== id));
-  }
-  //Metodo anterior Sin Express
+  //===============Metodo anterior Sin Express=================================
   /*   const login = (userData) => {
     // {userName : "alemar.martinez16@gmail.com", password: "123"}
     if (userData.userName === userName && userData.password === password) {
@@ -61,19 +90,39 @@ function App() {
       alert("El usuario o la contraseña no son correctos.");
     }
   }; */
+  //===========================================================================
 
-  // Con Express
-  function login(userData) {
+  function handleCloseCard(id) {
+    setCharacters((oldChars) => oldChars.filter((char) => char.id !== id));
+  }
+
+  //=================METODO CON ASYNC AWAY==============================================
+  const login = async (userData) => {
+    try {
+      const { userName, password } = userData;
+      const URL = "http://localhost:3001/rickandmorty/login/";
+      const { data } = await axios(
+        `${URL}?email=${userName}&password=${password}`
+      );
+      const { access } = data;
+      setAccess(data);
+      access && navigate("/home");
+    } catch (error) {
+      alert(error.message);
+    }
+  };
+  //===============METODO CON EXPRESS Y PROMESAS==========================================
+  /*   function login(userData) {
     const { userName, password } = userData;
     const URL = "http://localhost:3001/rickandmorty/login/";
     axios(`${URL}?email=${userName}&password=${password}`).then(({ data }) => {
       const { access } = data;
       setAccess(data);
-      console.log(access)
+      console.log(access);
       access && navigate("/home");
     });
-  }
-
+  } */
+  //===============================================================================
   const logOut = () => {
     access && setAccess(false);
     navigate("/");
@@ -112,5 +161,3 @@ function App() {
 }
 
 export default App;
-
-
