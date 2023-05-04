@@ -3,8 +3,24 @@ const express = require("express");
 const server = express();
 const PORT = 3001;
 const router = require("./routes/index");
+const { conn } = require("./DB_connection"); 
+
+conn.sync({ forse: true }).then(() => {
+  server.listen(PORT, () => {
+    console.log(`Server raised in port: 
+http://localhost
+: ${PORT}`);
+  });
+});
+
+
+
+
+
+
+
 //middleware .use y sus acciones(header)
-server.use((req, res, next) => {
+/* server.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Credentials", "true");
   res.header(
@@ -22,7 +38,7 @@ server.use("/rickandmorty", router);//middleware
 
 server.listen(PORT, () => {
   console.log("Server raised in port: " + PORT);
-});
+}); */
 
 //---------------------------------------------------------------------------
 // usando (HTTP) con createServer
