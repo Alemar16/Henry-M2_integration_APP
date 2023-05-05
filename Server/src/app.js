@@ -18,3 +18,5 @@ server.use(express.json());
 server.use("/rickandmorty", router);
 
 module.exports = server;
+
+

@@ -18,7 +18,7 @@ const postFav = async (req, res) => {
   }
 };
 
-modules.exports = postFav;
+module.exports = postFav;
 
 
 
