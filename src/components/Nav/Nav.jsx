@@ -1,18 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "./Logo/Logo";
 import styles from "./Nav.module.css";
 import NavBar from "./NavBar/NavBar.jsx";
 import SearchBar from "./SearchBar/SearchBar";
 
-
 export default function Nav(props) {
-  //console.log(props) // {onSearch : fn()}
+  const [hovered, setHovered] = useState(false);
+
   const handleLogOut = () => {
     props.logOut();
   };
+
+  const buttonText = hovered ? "Adiós" : "Salir";
+
   return (
     <div className={styles.container}>
-      <div className={styles.leftSection}>
+      <div className={`${styles.header} header`}>
         <Logo />
       </div>
 
@@ -24,11 +27,17 @@ export default function Nav(props) {
         <div>
           <SearchBar onSearch={props.onSearch} />
         </div>
-      </div >
-      <button onClick={handleLogOut}>LogOut</button>
+      </div>
+
+      <button
+        className={styles.logOutButton}
+        onClick={handleLogOut}
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+        style={{ width: "80px", alignItems: "center" }}
+      >
+        {buttonText}
+      </button>
     </div>
   );
 }
-
-
-

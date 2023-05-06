@@ -1,10 +1,12 @@
 .container {
 background-image: url(https://images5.alphacoders.com/633/633151.jpg);
+background-size: cover;
+background-position: center center;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 89vh;
+  height: 100vh;
 }
 
 .sidebarLeft {
@@ -38,14 +40,17 @@ background-image: url(https://images5.alphacoders.com/633/633151.jpg);
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.822);
   max-width: 800px; /* Establece un ancho máximo para el contenedor */
-  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  margin-top: 70px; /* Centra el contenedor horizontalmente */
   padding: 20px; /* Reduce el espacio interno */
 }
 
-h1 {
+.titulo_sinopsis {
   text-align: center;
+  color:rgb(13, 228, 41);
+  font-family: "Get Schwifty", cursive;
   font-size: 4em; /* Reduce el tamaño de fuente del título */
-  line-height: 1.2; /* Ajusta la altura de línea del título */
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;/* Ajusta la altura de línea del título */
 }
 
 .content {
@@ -123,7 +128,7 @@ h1 {
 }
 
 .link:hover {
-  background-color: #4a98b6;
+  background-color: #187505;
 }
 
 .link:hover:before {
