@@ -12,6 +12,7 @@ import Form from "./components/Form/Form";
 import Error404 from "./components/Error404/Error404";
 import { Navigate } from "react-router-dom";
 import Favorites from "./components/Favorites/Favorites";
+import HomeMessage from "./components/HomeMessage/HomeMessage"
 
 
 function App() {
@@ -81,6 +82,7 @@ function App() {
           element={
             <>
               <Titulo />
+              <HomeMessage/>
               <Cards onCloseCard={handleCloseCard} characters={characters} />
             </>
           }

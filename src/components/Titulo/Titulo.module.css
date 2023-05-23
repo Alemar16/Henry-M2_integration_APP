@@ -1,15 +1,11 @@
-/* @font-face {
-  font-family: "Get Schwifty";
-  src: url("../../assets/Font/get_schwifty.ttf") format("truetype");
-} */
-
 .titulo {
   font-family: "Get Schwifty", cursive;
   font-size: 5rem;
   font-weight: bold;
   color: rgb(13, 228, 41);
   margin-left: 10rem;
-  margin-top: 2.5rem;
+  margin-top: 8rem;
+  margin-bottom: 1rem;
   text-align: left;
   animation-name: tituloAnimacion;
   animation-duration: 2s;

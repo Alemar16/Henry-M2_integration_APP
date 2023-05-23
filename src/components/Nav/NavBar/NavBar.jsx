@@ -1,13 +1,15 @@
 import React from "react";
 import styles from "./NavBar.module.css";
-import { NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom";
 
-const NavLinkMe = ({ to, children, ...props }) => {
+const NavbarLink = ({ to, children, ...props }) => {
   return (
     <NavLink
       {...props}
       to={to}
-      className={({ isActive }) => (isActive ? styles.active : styles.disable)}
+      className={styles.navbarLink}
+      activeclassname={styles.active}
+      inactivecassname={styles.disable}
     >
       {children}
     </NavLink>
@@ -17,11 +19,10 @@ const NavLinkMe = ({ to, children, ...props }) => {
 export default function Navbar() {
   return (
     <div className={styles.navbar}>
-      <NavLink to="/home" className={styles.opcion}>Inicio</NavLink>
-      <NavLink to="/sinopsis" className={styles.opcion}>Sinopsis</NavLink>
-      <NavLink to="/favorites" className={styles.opcion}>Favoritos</NavLink>
-      <NavLink to="/about" className={styles.opcion}>Acerca de Mi</NavLink>
+      <NavbarLink to="/home">Inicio</NavbarLink>
+      <NavbarLink to="/sinopsis">Sinopsis</NavbarLink>
+      <NavbarLink to="/favorites">Favoritos</NavbarLink>
+      <NavbarLink to="/about">Acerca de Mi</NavbarLink>
     </div>
   );
 }
-
