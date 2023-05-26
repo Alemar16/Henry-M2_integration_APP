@@ -132,11 +132,12 @@
   text-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
 }
 .list3 {
-  display: flow-root;
-
-  color: #9c930b;
-  font-size: 1.5em;
+  display: inline-flex;
+  justify-content: space-between;
+  color: #d0d0d0;
+  font-size: 3em;
   text-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+  gap: 30px;
 }
 
 
