@@ -27,7 +27,7 @@ export default function Detail(props) {
     
     return (
       <div className={styles.container}>
-        <div>
+        <div className={styles.buttonRegresar}>
           <button onClick={() => navigate(-1)}>Regresar</button>
         </div>
           <div >
