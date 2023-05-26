@@ -1,8 +1,10 @@
 .background {
   background-image: url("https://images.alphacoders.com/876/876589.jpg");
   background-size: cover;
-  background-position: center center;
-  height: 83vh;
+  background-repeat: no-repeat;
+  background-position: center;
+ /*  background-attachment: fixed; */
+  height: 100vh;
   padding: 20px;
 }
 
@@ -36,7 +38,7 @@
 }
 
 .titulo {
-  margin-top: 0;
+  margin-top: 75px;
   margin-bottom: 0;
   font-family: Get Schwifty;
   font-size: 4rem;

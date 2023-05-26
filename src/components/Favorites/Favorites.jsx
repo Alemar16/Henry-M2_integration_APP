@@ -33,8 +33,8 @@ const Favorites = () => {
 
       <div className={styles.selectores}>
         <select id="orderSelect" onChange={handleOrder}>
-          <option value="order" disabled>
-            Ordenar en
+          <option value="" selected>
+            Ordenar por
           </option>
           <option value="Ascendente">Ascendente</option>
           <option value="Decendente">Descendente</option>
@@ -50,7 +50,7 @@ const Favorites = () => {
             }
           }}
         >
-          <option value="filter" disabled>
+          <option value="" selected>
             Filtrar por
           </option>
           <option value="Male">Masculino</option>
