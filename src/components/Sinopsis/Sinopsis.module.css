@@ -1,11 +1,7 @@
 .container {
 background-image: url(https://images5.alphacoders.com/633/633151.jpg);
 background-size: cover;
-<<<<<<< HEAD
 background-position: center;
-=======
-background-position: center center;
->>>>>>> 3ec22c11cd13e8eb2562a46d15c2ddb2418d50db
   display: flex;
   flex-direction: row;
   align-items: center;
