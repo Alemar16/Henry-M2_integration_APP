@@ -1,36 +1,7 @@
-/* 
 
-.container{
-  display: flex;
-  background-color: bisque;
-  flex-direction: column;
-  justify-content: center;
-  padding: 20px;
-  border-radius: 20px;
-  margin: 50px;
-  margin-left: 200px;
-  max-width: 30%;
-  max-height: 20%;
-}
+/* -----ESTILOS LOGIN----- */
 
-
-
-.container{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: rgba(31, 30, 29, 0.856);
-  padding: 20px;
-  border-radius: 20px;
-  margin: 50px;
-  margin-left: 400px;
-  max-width: 30%;
-  max-height: 20%;
-  z-index: 1; 
-
-}*/
-
-.Background {
+/* .Background {
   background-image: url('https://images4.alphacoders.com/102/1020142.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -108,6 +79,126 @@
   color: #fff;
   font-size: 18px;
   border-radius: 20px;
+} 
+
+.card-button {
+  padding: 0.5rem 1rem;
+  background-color: #0077cc;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.formContainer input[type="submit"]:hover {
+  cursor: pointer;
+  background: #ffc107;
+  color: #000;
+}
+
+.formContainer a {
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 20px;
+  color: darkgrey;
+}
+
+.formContainer a:hover {
+  color: #fff;
+} */
+
+
+/* --------------------ESTILOS SIN USAR LOGIN------------------- */
+
+
+.Background {
+  background-image: url('https://images4.alphacoders.com/102/1020142.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; 
+
+  background-color: #0e0d0d;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+} 
+.loginBox {
+  
+  width: 320px;
+  height: 400px;
+  background: #0000009c;
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  padding: 70px 10px;
+  border-radius: 10px;
+  
+}
+
+.avatar {
+  
+  width: 200px;
+  height: 200px;
+
+  position: absolute;
+  top: 10px;
+  left: 60px
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.formContainer label {
+  margin-bottom: 1px;
+}
+
+.formContainer input {
+  border: none;
+  border-bottom: 1px solid #242222;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: #4d4949;
+  font-size: 16px;
+}
+
+.formContainer input[type="text"],
+.formContainer input[type="password"] {
+  margin-bottom: 20px;
+  
+}
+.card-button {
+   padding: 0.5rem 1rem;
+  background-color: #0077cc;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  /* 
+  padding: 0.5rem 1rem;
+  background-color: #ffc107;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer; */
+  margin-top: 150px;
+}
+.card-button:hover {
+  cursor: pointer;
+  background: #ffc107;
+  color: #000;
 }
 
 .formContainer input[type="submit"]:hover {
